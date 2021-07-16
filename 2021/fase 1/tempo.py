@@ -1,10 +1,7 @@
 #INFUNCIONAL
 n = int(input(""))
-for i in range(0, n):
-    print(i, end=' ')
 
-
-td = [*range(1, 100)]
+td = [*range(0, 100)]
 #td[#amigo] = [#status, #tempo total resposta]
 #status: sem resposta=0, respondido=1
 
@@ -12,28 +9,29 @@ for i in range(0, n):
     o, z = str(input('')).split(' ')
     z = int(z)
 
-    if(o == "R"):
+    if(o=='T'):
+         for j in range(0, len(td)):
+            if(type(td[j]) == list):
+                if(td[j][0] == 0):
+                    td[j][1] += z
+    elif(i!=0 and i!=n):
+        for j in range(0, len(td)):
+            if(type(td[j]) == list):
+                if(td[j][0] == 0):
+                    td[j][1] += 1
+
+    if(o == 'R'):
         try:
             td[z][0] = 0
         except:
             td[z] = [0, 0]
-    elif(o == "E"):
+
+    elif(o == 'E'):
         td[z][0] = 1
-    else:
-        for j in range(0, len(td)):
-            if(type(td[j]) ==  list):
-                if(td[j][0] == 0):
-                    td[j][1] += z
-
-    if(i!=0 and i!=n-1 and o!='T'):
-        for j in range(0, len(td)):
-            if(type(td[j]) ==  list):
-                if(td[j][0] == 0):
-                    td[j][1] += 1
-
+       
 
 for i in range(0, len(td)):
-    if(type(td[i]) ==  list):
+    if(type(td[i]) == list):
 
         print(i, end=" ")
         
