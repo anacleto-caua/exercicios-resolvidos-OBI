@@ -7,7 +7,7 @@ for i in range(0, t):
     d, l, b = str(input('')).split()
     b=int(b)
     
-    p_i=str(input('')).split()
+    ingredientes=str(input('')).split()
 
     niobizinhos=[]
     for j in range(0, b):
@@ -15,7 +15,7 @@ for i in range(0, t):
        
         for k in range(1, len(bd)-1, 2):
             niobizinhos.append(
-                int(p_i[int(bd[int(k)])])*
+                int(ingredientes[int(bd[int(k)])])*
                 int(bd[int(k+1)])
                 )
 
