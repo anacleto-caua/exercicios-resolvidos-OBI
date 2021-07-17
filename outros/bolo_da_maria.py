@@ -11,7 +11,6 @@ for i in range(0, t):
     
     p_i=str(input('')).split()
 
-    bd=[]
     niobizinhos=[]
     for j in range(0, b):
         bd=str(input('')).split()
