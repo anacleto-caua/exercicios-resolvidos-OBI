@@ -4,9 +4,7 @@ t = int(input(''))
 
 respostas=[]
 for i in range(0, t):
-    d, i, b = str(input('')).split()
-    d=int(d)
-    i=int(i)
+    d, l, b = str(input('')).split()
     b=int(b)
     
     p_i=str(input('')).split()
