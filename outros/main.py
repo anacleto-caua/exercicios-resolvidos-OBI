@@ -1,5 +1,4 @@
-from typing import ForwardRef
-
+#exercicío retirado de: https://www.urionlinejudge.com.br/judge/en/problems/view/1608
 
 t = int(input(''))
 
