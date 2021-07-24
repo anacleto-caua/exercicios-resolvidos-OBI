@@ -9,12 +9,7 @@ for i in range(0, n):
     o, z = str(input('')).split(' ')
     z = int(z)
 
-    if(o=='T'):
-         for j in range(0, len(td)):
-            if(type(td[j]) == list):
-                if(td[j][0] == 0):
-                    td[j][1] += z
-    elif(i!=0 and i!=n):
+    if(i%2!=0):
         for j in range(0, len(td)):
             if(type(td[j]) == list):
                 if(td[j][0] == 0):
@@ -28,7 +23,13 @@ for i in range(0, n):
 
     elif(o == 'E'):
         td[z][0] = 1
-       
+
+    else:
+         for j in range(0, len(td)):
+            if(type(td[j]) == list):
+                if(td[j][0] == 0):
+                    td[j][1] += z
+
 
 for i in range(0, len(td)):
     if(type(td[i]) == list):
